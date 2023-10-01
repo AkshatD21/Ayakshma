@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import AboutImg from "../assets/night.jpg";
+import styles from '../constants/style';
 import Footer from '../components/Footer';
 import ServicePage from '../components/ServicePage';
 
@@ -9,13 +8,11 @@ const Service = () => {
   return (
     <div>
       <Navbar />
-      <Hero
-        cName="hero-mid"
-        heroImg={AboutImg}
-        title="Service"
-        btnClass="hide"
-      />
-      <ServicePage />
+      <div className={`bg-white ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <ServicePage />
+          </div>
+      </div>
       <Footer />
     </div>
   )

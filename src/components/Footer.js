@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="top">
       <div>
         <img className="rlogo" alt="RealLogo" src={Rlogo}/>
-        <p>Choose your favourite destination</p>
+          <p className='mt-4'>The essence of our humanity lies in our pursuit of healthcare.</p>
       </div>
       <div>
         <a href="/">

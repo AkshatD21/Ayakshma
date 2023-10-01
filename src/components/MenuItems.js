@@ -1,3 +1,6 @@
+import star from '../assets/Star.svg';
+import shield from '../assets/Shield.svg'
+
 export const MenuItems = [
     {
         title : "Home",
@@ -29,3 +32,45 @@ export const MenuItems = [
         cName: "nav-links-mobile",
     }
 ]
+
+export const features1 = [
+    {
+        id: "feature-1",
+        icon: star,
+        content:
+            "Predict diseases based on symptoms, reducing hospital visits.",
+    },
+    {
+        id: "feature-2",
+        icon: star,
+        content:
+            "Empower individuals to proactively manage their health.",
+    },
+    {
+        id: "feature-3",
+        icon: star,
+        content:
+            "Deliver accessible, actionable healthcare solutions.",
+    },
+];
+
+export const features2 = [
+    {
+        id: "feature-1",
+        icon: shield,
+        content:
+            "Lead the digital health revolution.",
+    },
+    {
+        id: "feature-2",
+        icon: shield,
+        content:
+            "Enable remote healthcare, especially during crises.",
+    },
+    {
+        id: "feature-3",
+        icon: shield,
+        content:
+            "Foster healthier communities through prevention and convenience.",
+    },
+];

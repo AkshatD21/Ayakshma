@@ -1,34 +1,40 @@
-import React from 'react';
-import Mountain1 from "../assets/1.jpg";
-import Mountain2 from "../assets/2.jpg";
-import Mountain3 from "../assets/3.jpg";
-import Mountain4 from "../assets/4.jpg";
+import React, {useRef, useEffect} from 'react';
 import "./DestinationStyles.css"
-import DestinationData from './DestinationData';
+import styles, {layout} from "../constants/style"
+import lottie from 'lottie-web'
 
 const Destination = () => {
+
+  const container = useRef(null)
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: require('../assets/Home2.json')
+    })
+  }, [])
+
   return (
-    <div className="destination">
-      <h1>Popular Destinations</h1>
-      <p>Tours give you opportunity to explore the real you</p>
+    <section className={layout.sectionReverse}>
+        <div ref={container} className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative w-[400px] h-[400px]`}></div>
 
-      <DestinationData 
-      className="first-des"
-      heading= "Second Heading"
-      text= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nobis repudiandae optio minus, quaerat, id aspernatur cupiditate ipsam dolorum a nam perferendis soluta quos! Blanditiis facere inventore itaque reprehenderit omnis?"
 
-        img1={Mountain1}
-        img2={Mountain2}
-      />
-      <DestinationData
-      className="first-des-reverse"
-        heading="Third Heading"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nobis repudiandae optio minus, quaerat, id aspernatur cupiditate ipsam dolorum a nam perferendis soluta quos! Blanditiis facere inventore itaque reprehenderit omnis?"
+      <div className={layout.sectionInfo}>
+        <h2 className={styles.heading2}>
+          Idea Behind <br className="sm:block hidden" /> 
+          <p className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-custom ss:leading-[100.8px] leading-[75px]">
+            Ayakshma?
+          </p>
+        </h2>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+          Picture a world where healthcare is a breeze. Our disease prediction website, bringing dreams to life, blends advanced tech with an easy-to-use interface. It lets you share symptoms effortlessly and offers accurate health insights.
+        </p>
 
-        img1={Mountain3}
-        img2={Mountain4}
-      />
-    </div>
+      </div>
+    </section>
   )
 }
 
