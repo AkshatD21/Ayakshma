@@ -21,16 +21,17 @@ export const MenuItems = [
         icon: "fa-solid fa-briefcase",
     },
     {
+        title: "Expert",
+        url: "/expert",
+        cName: "nav-links",
+        icon: "fa-solid fa-stethoscope",
+    },
+    {
         title: "Contact",
         url: "/contact",
         cName: "nav-links",
         icon: "fa-solid fa-address-book",
     },
-    {
-        title: "Sign Up",
-        url: "/signup",
-        cName: "nav-links-mobile",
-    }
 ]
 
 export const features1 = [

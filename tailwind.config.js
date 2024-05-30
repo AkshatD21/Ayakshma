@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
-    extend: {
+    extend: { 
       colors: {
         primary: "#00040f",
         secondary: "#00f6ff",

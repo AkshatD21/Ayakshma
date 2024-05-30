@@ -14,7 +14,6 @@ const Navbar = () => {
   return (
       <nav className="NavbarItems">
           <img className="lg" alt="logo" src={Logo}/>
-          {/* <h1>Trippy</h1> */}
 
           <div className="menu-icons" onClick={handleClick}>
             <i className={`${state ? 'fas fa-times' : 'fas fa-bars'}`}></i>
@@ -27,8 +26,6 @@ const Navbar = () => {
                     </li>   
                 )
             })}
-              
-              <button>Sign Up</button>
           </ul>
       </nav>
   )
